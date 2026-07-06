@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #2563EB;
+  --color-brand-primary-light: #3B82F6;
+  --color-brand-accent: #8B5CF6;
+  --color-brand-accent-light: #A855F7;
+  
+  --color-brand-bg: #FFFFFF;
+  --color-brand-bg-subtle: #F8FAFC;
+  
+  --color-brand-text: #0F172A;
+  --color-brand-text-muted: #334155;
+  
+  --font-sans: var(--font-inter);
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-primary-light;
+  }
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-accent to-brand-accent-light;
+  }
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-brand-primary to-brand-primary-light text-white;
+  }
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+}
