@@ -10,13 +10,14 @@ interface ContactSidebarProps {
 export default function ContactSidebar({ activeTab }: ContactSidebarProps) {
   return (
     <motion.div 
-      className="lg:col-span-4 space-y-6 w-full lg:w-[280px]"
+      className="lg:col-span-4 lg:pl-10 xl:pl-14"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Contact Info Cards */}
-      <div className="bg-transparent space-y-6">
+      <div className="space-y-6 w-full lg:w-[280px]">
+        {/* Contact Info Cards */}
+        <div className="bg-transparent space-y-6">
         {/* Email Us */}
         <div className="flex items-start gap-4">
           <div className="w-12 h-12 rounded-full bg-[#003D82]/5 text-[#003D82] flex items-center justify-center shrink-0 border border-[#003D82]/10">
@@ -80,6 +81,7 @@ export default function ContactSidebar({ activeTab }: ContactSidebarProps) {
             <span className="text-sm text-[#64748B] font-medium">No-obligation ERP health audit</span>
           </li>
         </ul>
+      </div>
       </div>
     </motion.div>
   );

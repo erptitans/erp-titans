@@ -100,14 +100,14 @@ export default function Navbar() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[300px] max-w-full"
+                          className="absolute left-1/2 -translate-x-1/2 top-full pt-4 min-w-[320px] w-max z-50"
                         >
                           <div className="bg-white rounded-[24px] p-6 shadow-xl border border-gray-100 flex flex-col gap-2">
                             {link.dropdown.map((sublink) => (
                               <Link
                                 key={sublink.name}
                                 href={sublink.href}
-                                className="block px-4 py-3 rounded-xl hover:bg-[#003D82] text-[#475569] hover:text-white font-medium transition-all duration-200 hover:translate-x-1"
+                                className="block px-4 py-3 rounded-xl hover:bg-[#003D82] text-[#475569] hover:text-white font-medium transition-all duration-200 hover:translate-x-1 whitespace-nowrap"
                               >
                                 {sublink.name}
                               </Link>
@@ -169,7 +169,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-0 top-full w-full px-6 pt-3 pointer-events-auto"
+              className="absolute left-0 top-full w-full px-6 pt-3 pointer-events-auto z-50"
             >
               <div className="flex flex-col space-y-2 rounded-3xl border border-gray-200 bg-white/95 p-4 shadow-2xl backdrop-blur-2xl">
                 {navLinks.map((link) => {
