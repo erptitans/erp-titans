@@ -1,7 +1,7 @@
 import * as ics from "ics";
 import { sendEmail } from "@/lib/email";
 
-const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "tech@erptitans.com";
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "sales@erptitans.com";
 
 interface ContactFormData {
   fullName: string;

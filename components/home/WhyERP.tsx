@@ -77,7 +77,7 @@ export default function WhyERP() {
                   whileHover={{ y: -3 }}
                   className="bg-white p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-[#E2E8F0] hover:border-[#003D82]/30 hover:shadow-[0_10px_30px_-10px_rgba(37,99,235,0.15)] transition-all duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#F8FAFC] text-[#475569] flex items-center justify-center mb-3 group-hover:bg-[#003D82] group-hover:text-[#003D82] transition-colors duration-300 border border-[#E2E8F0] group-hover:border-[#003D82]">
+                  <div className="w-10 h-10 rounded-xl bg-[#F8FAFC] text-[#475569] flex items-center justify-center mb-3 group-hover:bg-[#003D82]/10 group-hover:text-[#003D82] transition-colors duration-300 border border-[#E2E8F0] group-hover:border-[#003D82]/30">
                     {feature.icon}
                   </div>
                   <h3 className="text-base font-bold text-[#0F172A] mb-1.5">{feature.title}</h3>
