@@ -263,17 +263,18 @@ export const sendContactEmail = async (data: ContactFormData) => {
       "Industry": data.industry,
     });
 
-    await sendEmail({
-      to: NOTIFICATION_EMAIL,
-      subject: "New ERP Titans Contact Form Submission",
-      html: adminHtml,
-    });
-
-    await sendEmail({
-      to: data.email,
-      subject: "Thank You for Contacting ERP Titans",
-      html: customerHtml,
-    });
+    await Promise.all([
+      sendEmail({
+        to: NOTIFICATION_EMAIL,
+        subject: "New ERP Titans Contact Form Submission",
+        html: adminHtml,
+      }),
+      sendEmail({
+        to: data.email,
+        subject: "Thank You for Contacting ERP Titans",
+        html: customerHtml,
+      })
+    ]);
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.error("OUTLOOK EMAIL SEND ERROR (Contact Form):", message);
@@ -316,18 +317,19 @@ export const sendAuditBookingEmail = async (data: AuditFormData) => {
       contentBytes: Buffer.from(icsContent).toString('base64')
     }] : [];
 
-    await sendEmail({
-      to: NOTIFICATION_EMAIL,
-      subject: "URGENT: New ERP Audit Booking | ERP Titans",
-      html: adminHtml,
-      attachments: attachments
-    });
-
-    await sendEmail({
-      to: data.email,
-      subject: "Your ERP Health Audit Confirmation",
-      html: customerHtml,
-    });
+    await Promise.all([
+      sendEmail({
+        to: NOTIFICATION_EMAIL,
+        subject: "URGENT: New ERP Audit Booking | ERP Titans",
+        html: adminHtml,
+        attachments: attachments
+      }),
+      sendEmail({
+        to: data.email,
+        subject: "Your ERP Health Audit Confirmation",
+        html: customerHtml,
+      })
+    ]);
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.error("OUTLOOK EMAIL SEND ERROR (Audit Booking):", message);
