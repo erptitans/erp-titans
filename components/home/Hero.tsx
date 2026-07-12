@@ -13,7 +13,7 @@ export default function Hero() {
           <div className="text-left">
 
 
-            <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-8 text-[#0F172A]">
+            <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-8 text-[#003D82]">
               Fix Your Broken ERP. <br />
               <span className="text-[#003D82]">Scale Your Business.</span>
             </h1>
