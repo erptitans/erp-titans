@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link href="/industries/manufacturing" className="text-brand-text-muted hover:text-brand-primary transition-colors text-sm">Manufacturing Solutions</Link></li>
               <li><Link href="/industries/distribution" className="text-brand-text-muted hover:text-brand-primary transition-colors text-sm">Distribution & Logistics</Link></li>
-              <li><Link href="/industries/cannabis" className="text-brand-text-muted hover:text-brand-primary transition-colors text-sm">Cannabis Compliance</Link></li>
+              <li><Link href="/industries/cannabis" className="text-brand-text-muted hover:text-brand-primary transition-colors text-sm">Cannabis</Link></li>
             </ul>
           </div>
 
