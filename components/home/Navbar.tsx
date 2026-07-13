@@ -33,7 +33,7 @@ export default function Navbar() {
       dropdown: [
         { name: "Manufacturing", href: "/industries/manufacturing" },
         { name: "Distribution & Logistics", href: "/industries/distribution" },
-        { name: "Cannabis Compliance", href: "/industries/cannabis" },
+        { name: "Cannabis", href: "/industries/cannabis" },
       ]
     },
     { name: "About", href: "/about" },
